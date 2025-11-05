@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME: <your-dockerhub-user>/ai-autotag-dbt
+  IMAGE_NAME: docker.io/oliveradage/ai-autotag
 
 jobs:
   build:
