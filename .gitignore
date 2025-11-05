@@ -1,0 +1,27 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Local config and secrets
+*.env
+
+# Large or temporary files
+*.log
+*.csv
+*.tmp
+*.bak
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Models (we download in Dockerfile instead)
+models/
+
+# Docker build cache / artefacts
+*.tar
