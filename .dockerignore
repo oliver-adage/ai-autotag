@@ -1,4 +1,48 @@
-__pycache__/
-*.pyc
+# =====================
+# .dockerignore
+# =====================
+
+# Git + CI files
+.git
+.gitignore
+.github
 .env
+*.md
+
+# Python environment and caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env/
+venv/
+build/
+dist/
+
+# IDE and OS junk
+.vscode/
+.idea/
 .DS_Store
+Thumbs.db
+
+# Data (only keep sample if needed for demos)
+data/
+!data/sample/
+
+# Model artifacts
+models/
+checkpoints/
+runs/
+outputs/
+logs/
+
+# Local notebooks, tests, reports
+notebooks/
+reports/
+tests/
+tmp/
+*.log
+
+# Docker + compose files themselves (optional)
+Dockerfile.dev
+docker-compose*.yml

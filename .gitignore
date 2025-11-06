@@ -1,27 +1,70 @@
-# Python cache
+# =====================
+# .gitignore
+# =====================
+
+# Python
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+dist/
+build/
 
-# Virtual environments
+# Environments
 .venv/
-env/
 venv/
+.env
+env/
+pip-wheel-metadata/
+*.lock
 
-# Local config and secrets
-*.env
-
-# Large or temporary files
-*.log
-*.csv
-*.tmp
-*.bak
-
-# OS-specific
+# IDE / editor files
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
 
-# Models (we download in Dockerfile instead)
-models/
+# Data
+data/raw/
+data/interim/
+data/processed/
+data/results/
+!data/sample/       # keep tiny test data
+*.csv
+*.parquet
+*.jsonl
+*.zip
 
-# Docker build cache / artefacts
-*.tar
+# Models and outputs
+models/
+outputs/
+checkpoints/
+runs/
+logs/
+*.pt
+*.pkl
+*.onnx
+*.h5
+
+# Notebooks + evaluation artifacts
+notebooks/
+reports/
+tmp/
+*.log
+*.html
+*.pdf
+*.png
+*.jpg
+
+# Docker & deployment secrets
+docker-compose.override.yml
+secrets/
+*.pem
+*.key
+*.crt
+
+# OS junk
+ehthumbs.db
+Icon?
