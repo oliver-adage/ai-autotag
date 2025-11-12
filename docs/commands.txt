@@ -1,0 +1,6 @@
+docker run --rm
+ -it --name autotag -p 8000:8000 `
+>>   -v "${PWD}\models:/app/models:ro" `
+>>   -v "${PWD}\app.py:/app/app.py:ro" `
+>>   oliveradage/ai-autotag-dbt:dbx-latest `
+>>   /databricks/python3/bin/uvicorn app:app --host 0.0.0.0 --port 8000 --log-level debug
